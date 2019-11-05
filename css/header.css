@@ -1,0 +1,20 @@
+header
+{
+    width: 100vw;
+    height: 80px;
+    background: #404040;
+    color: #ffffff;
+    position: relative;
+}
+
+header span
+{
+    height: 40px;
+    font-size: 35px;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    position: absolute;
+    margin: auto;
+    display: block;
+}

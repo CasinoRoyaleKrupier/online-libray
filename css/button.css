@@ -1,0 +1,45 @@
+.button
+{
+    height: 15px;
+    margin: 32.5px 40px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100px;
+    position: relative;
+    will-change: transform;
+    transition: all 500ms ease-in-out;
+}
+
+footer .button
+{
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    margin: 30px auto;
+}
+
+.button:hover
+{
+    transform: translateY(-5px);
+}
+
+.button::after
+{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    transform: translateY(5px);
+    transition: 0.5s ease-in-out;
+}
+
+.button:hover::after
+{
+    width: 100%;
+}
