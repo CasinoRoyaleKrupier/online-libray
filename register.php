@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/login_panel.css">
+    <!-- <link rel="stylesheet" href="css/login_panel.css"> -->
 
     <title>Document</title>
 </head>
