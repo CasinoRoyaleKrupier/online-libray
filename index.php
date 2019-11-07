@@ -36,7 +36,7 @@
         <form action="user_php_scripts/register_new_user.php" method="post">
             <input type="text" name="login" placeholder="Login">
             <input type="password" name="password" placeholder="Hasło">
-            <input type="password" name="re_password" placeholder="Powtórz hasło">
+            <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
 
             <input type="submit" value="Zajerestruj się">
         </form>

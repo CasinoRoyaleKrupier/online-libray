@@ -1,6 +1,7 @@
 body
 {
-    background: linear-gradient(35deg, hsl(10, 100%, 50%) 12%, hsl(30, 100%, 54%) 71%);
+    /* background: linear-gradient(35deg, hsl(10, 100%, 50%) 12%, hsl(30, 100%, 54%) 71%); */
+    background: #404040;
     background-attachment: fixed;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
