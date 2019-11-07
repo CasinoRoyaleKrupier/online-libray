@@ -21,17 +21,39 @@ header
 
 #container_login
 {
+    width: calc(100vw - 20px);
+    height: 80px;
+    margin: 0 auto;
+    background: #fff;
+    position: relative;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+#container_register
+{
     background-color: #ffffff;
     color: #000000;
     width: 300px;
+    height: 300px;
     padding: 50px;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: 150px;
-    margin-top: 100px;
+    margin-top: 100px; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    margin-right: 100px;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,1);
-    box-shadow: 0px 0px 30px -5px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 input[type=text], input[type=password]
@@ -48,6 +70,18 @@ input[type=text], input[type=password]
 }
 
 input[type=password] { margin-top: 10px; }
+
+#container_login input[type=text],
+#container_login input[type=password],
+#container_login input[type=submit]
+{
+    font-size: 15px;
+    margin: 19.5px 1px;
+    float: left;
+}
+
+#container_login input[type=submit] { margin: 16.5px 10px; }
+#container_register input[type=text] { margin-bottom: 20px; }
 
 input[type=text]:focus, input[type=password]:focus
 {

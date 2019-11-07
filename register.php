@@ -23,7 +23,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="container_login">
+    <div id="container_register">
         <header>Biblioteka online - logowanie</header>
         <form action="user_php_scripts/authorization.php" method="post">
             <input type="text" name="login" placeholder="Login">

@@ -20,23 +20,26 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login_panel.css">
 
-    <title>Document</title>
+    <title>Biblioteka online - Logowanie</title>
 </head>
 <body>
     <div id="container_login">
-        <header>Biblioteka online - logowanie</header>
         <form action="user_php_scripts/authorization.php" method="post">
+            <input type="submit" value="Zaloguj się">
+
             <input type="text" name="login" placeholder="Login">
             <input type="password" name="password" placeholder="Hasło">
-
-            <input type="submit" value="Zaloguj się">
         </form>
+    </div>
+    <div id="container_register">
+        <header>Rejestracja</header>
+        <form action="user_php_scripts/register_new_user.php" method="post">
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Hasło">
+            <input type="password" name="re_password" placeholder="Powtórz hasło">
 
-        <div>
-            <a href="register.php">
-                Zajerestruj się
-            </a>
-        </div>
+            <input type="submit" value="Zajerestruj się">
+        </form>
 
         <?php
             if (isset($_SESSION['error']))
@@ -45,6 +48,6 @@
             }
         ?>
     </div>
-    <script src="js/login_listeners.js"></script>
+    <!-- <script src="js/login_listeners.js"></script> -->
 </body>
 </html>
