@@ -11,7 +11,7 @@
     {
         $connection->query("SET NAMES 'utf8'");
 
-        if ($result = $connection->query("SELECT * FROM books WHERE available = 1"))
+        if ($result = $connection->query("SELECT * FROM books WHERE is_available = true"))
         {
             $row = $result->fetch_assoc();
             while($row = mysqli_fetch_array($result))
