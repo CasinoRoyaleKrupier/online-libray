@@ -35,18 +35,6 @@
     </div>
 
     <div id="container_row">
-        <div id="containter_table">
-        <table class="tg">
-            <tr>
-                <th class="tg-c3ow">Tytuł</th>
-                <th class="tg-c3ow">Autor</th>
-            </tr>
-            <?php require_once "user_php_scripts/login_table_books.php" ?>
-        </table>
-    </div>
-    </div>
-
-    <div id="container_row">
         <div id="container_register">
             <header>Rejestracja</header>
             <form action="user_php_scripts/register_new_user.php" method="post">
@@ -57,6 +45,19 @@
                 <input type="submit" value="Zajerestruj się">
             </form>
         </div>
+    </div>
+
+    <div id="container_row">
+        <div id="containter_table">
+        <span id="table_title">Lista dostępnych książek</span>
+        <table class="tg">
+            <tr>
+                <th class="tg-c3ow">Tytuł</th>
+                <th class="tg-c3ow">Autor</th>
+            </tr>
+            <?php require_once "user_php_scripts/login_table_books.php" ?>
+        </table>
+    </div>
     </div>
 
     <!-- <script src="js/login_listeners.js"></script> -->

@@ -23,16 +23,15 @@ header
 #container_row
 {
     width: 50%;
-    height: calc(200vh - 80px);
+    min-height: calc(100vh - 80px);
     float: left;
     position: relative;
-    /* background: #000; */
 }
 
 #container_login
 {
     width: calc(100% - 20px);
-    height: 80px;
+    min-height: 80px;
     margin: 0 auto;
     background: #fff;
     position: relative;
@@ -56,15 +55,26 @@ header
     right: 0;
     position: absolute;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     border-radius: 20px;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
-@media(max-width: 1000px)
+#table_title {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0;
+    display: block;
+}
+
+@media(max-width: 1200px)
 {
+    #container_row
+    {
+        width: 100%;
+    }
     #container_register
     {
         margin: 50px auto;
