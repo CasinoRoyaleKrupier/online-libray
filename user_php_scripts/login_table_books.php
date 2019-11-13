@@ -9,6 +9,8 @@
     }
     else
     {
+        $connection->query("SET NAMES 'utf8'");
+
         if ($result = $connection->query("SELECT * FROM books WHERE available = 1"))
         {
             $row = $result->fetch_assoc();
