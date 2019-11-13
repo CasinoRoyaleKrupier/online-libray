@@ -33,6 +33,8 @@ header
     width: calc(100% - 20px);
     min-height: 80px;
     margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
     background: #fff;
     position: relative;
     border-bottom-right-radius: 5px;

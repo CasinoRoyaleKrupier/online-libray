@@ -27,10 +27,10 @@
 <body>
     <div id="container_login">
         <form action="user_php_scripts/authorization.php" method="post">
-            <input type="submit" value="Zaloguj się">
-
             <input type="text" name="login" placeholder="Login">
             <input type="password" name="password" placeholder="Hasło">
+
+            <input type="submit" value="Zaloguj się">
         </form>
     </div>
 
