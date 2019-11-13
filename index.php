@@ -13,12 +13,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login_panel.css">
+    <link rel="stylesheet" href="css/login_inputs.css">
+    <link rel="stylesheet" href="css/table.css">
 
     <title>Biblioteka online - Logowanie</title>
 </head>
@@ -31,23 +33,32 @@
             <input type="password" name="password" placeholder="Hasło">
         </form>
     </div>
-    <div id="container_register">
-        <header>Rejestracja</header>
-        <form action="user_php_scripts/register_new_user.php" method="post">
-            <input type="text" name="login" placeholder="Login">
-            <input type="password" name="password" placeholder="Hasło">
-            <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
 
-            <input type="submit" value="Zajerestruj się">
-        </form>
-
-        <?php
-            if (isset($_SESSION['error']))
-            {
-                echo $_SESSION['error'];
-            }
-        ?>
+    <div id="container_row">
+        <div id="containter_table">
+        <table class="tg">
+            <tr>
+                <th class="tg-c3ow">Tytuł</th>
+                <th class="tg-c3ow">Autor</th>
+            </tr>
+            <?php require_once "user_php_scripts/login_table_books.php" ?>
+        </table>
     </div>
+    </div>
+
+    <div id="container_row">
+        <div id="container_register">
+            <header>Rejestracja</header>
+            <form action="user_php_scripts/register_new_user.php" method="post">
+                <input type="text" name="login" placeholder="Login">
+                <input type="password" name="password" placeholder="Hasło">
+                <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
+
+                <input type="submit" value="Zajerestruj się">
+            </form>
+        </div>
+    </div>
+
     <!-- <script src="js/login_listeners.js"></script> -->
 </body>
 </html>

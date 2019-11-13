@@ -21,6 +21,7 @@ CREATE TABLE books (
     title VARCHAR(50) NOT NULL,
     series VARCHAR(50),
     author VARCHAR(50) NOT NULL,
+    available INTEGER NOT NULL,
     rental_period INTEGER NOT NULL
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ENGINE=InnoDB AUTO_INCREMENT=1;
 
