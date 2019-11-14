@@ -11,7 +11,7 @@
     {
         $connection->query("SET NAMES 'utf8'");
 
-        if ($result = $connection->query("SELECT * FROM books WHERE is_available = true"))
+        if ($result = $connection->query("SELECT * FROM books WHERE is_available = true ORDER BY RAND() LIMIT 10"))
         {
             $row = $result->fetch_assoc();
             while($row = mysqli_fetch_array($result))

@@ -1,4 +1,6 @@
-input[type=text], input[type=password]
+input[type=text],
+input[type=password],
+input[type=email]
 {
     background-color: #efefef;
     color: #666666;
@@ -11,8 +13,6 @@ input[type=text], input[type=password]
     outline: none;
 }
 
-input[type=password] { margin-top: 10px; }
-
 #container_login input[type=text],
 #container_login input[type=password],
 #container_login input[type=submit]
@@ -23,9 +23,15 @@ input[type=password] { margin-top: 10px; }
 }
 
 #container_login input[type=submit] { margin: 16.5px 10px; }
-#container_register input[type=text] { margin-bottom: 20px; }
 
-input[type=text]:focus, input[type=password]:focus
+#container_register input[type=text],
+#container_register input[type=email],
+#container_register input[type=password]
+{
+    margin-bottom: 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus
 {
     -webkit-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);
     -moz-box-shadow: 0px 0px 10px 2px rgba(204,204,204,0.9);

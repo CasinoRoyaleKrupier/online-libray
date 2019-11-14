@@ -41,6 +41,8 @@
                 <input type="text" name="login" placeholder="Login">
                 <input type="password" name="password" placeholder="Hasło">
                 <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
+                <input type="email" name="e-mail" placeholder="E-mail">
+
 
                 <input type="submit" value="Zajerestruj się">
             </form>
@@ -49,15 +51,15 @@
 
     <div id="container_row">
         <div id="containter_table">
-        <span id="table_title">Lista dostępnych książek</span>
-        <table class="tg">
-            <tr>
-                <th class="tg-c3ow">Tytuł</th>
-                <th class="tg-c3ow">Autor</th>
-            </tr>
-            <?php require_once "user_php_scripts/login_table_books.php" ?>
-        </table>
-    </div>
+            <span id="table_title">Niektóre książki dostępne u nas</span>
+            <table class="tg">
+                <tr>
+                    <th class="tg-c3ow">Tytuł</th>
+                    <th class="tg-c3ow">Autor</th>
+                </tr>
+                <?php require_once "user_php_scripts/login_table_books.php" ?>
+            </table>
+        </div>
     </div>
 
     <!-- <script src="js/login_listeners.js"></script> -->
