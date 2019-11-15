@@ -11,7 +11,7 @@ nav
     text-align: center;
     position: relative;
     z-index: 1;
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .nav_button:hover
