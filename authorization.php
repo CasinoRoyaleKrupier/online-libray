@@ -7,7 +7,7 @@
         exit();
     }
 
-    require_once "../administrator/connect.php";
+    require_once "connect.php";
 
     $connection = @new mysqli($host, $db_user, $db_password, $db_name);
 
@@ -36,19 +36,19 @@
                     $_SESSION['email'] = $row['mail'];
 
                     unset($_SESSION['error']);
-                    header('Location: ../panel_user.php');
+                    header('Location: panel_user.php');
                     $result->close();
                 }
                 else
                 {
                     $_SESSION['error'] = '<div style="color: red; margin-top: 10px; font-size: 18px; font-family: \'Roboto\', sans-serif;">Incorect password!</div>';
-                    header('Location: ../index.php');
+                    header('Location: index.php');
                 }
             }
             else
             {
                 $_SESSION['error'] = '<div style="color: red; margin-top: 10px; font-size: 18px; font-family: \'Roboto\', sans-serif;">Incorect login or password!</div>';
-                header('Location: ../index.php');
+                header('Location: index.php');
             }
         }
 

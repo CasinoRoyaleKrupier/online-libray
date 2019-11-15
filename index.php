@@ -26,7 +26,7 @@
 </head>
 <body>
     <div id="container_login">
-        <form action="user_php_scripts/authorization.php" method="post">
+        <form action="authorization.php" method="post">
             <input type="text" name="login" placeholder="Login">
             <input type="password" name="password" placeholder="Hasło">
 
@@ -37,8 +37,8 @@
     <div id="container_row">
         <div id="container_register">
             <header>Rejestracja</header>
-            <form action="user_php_scripts/register_new_user.php" method="post">
-                <input type="text" name="login" placeholder="Login">
+            <form action="add_new_user.php" method="post">
+                <input type="text" name="username" placeholder="Login">
                 <input type="password" name="password" placeholder="Hasło">
                 <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
                 <input type="email" name="e-mail" placeholder="E-mail">
@@ -57,7 +57,7 @@
                     <th class="tg-c3ow">Tytuł</th>
                     <th class="tg-c3ow">Autor</th>
                 </tr>
-                <?php require_once "user_php_scripts/login_table_books.php" ?>
+                <?php require_once "login_table_books.php" ?>
             </table>
         </div>
     </div>
