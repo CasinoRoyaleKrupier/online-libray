@@ -68,7 +68,7 @@
 
         if ($is_OK == true)
         {
-            if ($connection->query("INSERT INTO users VALUES (NULL, '$username', '$hash_pass', '$email');"))
+            if ($connection->query("INSERT INTO users (username, pass, mail, is_administrator) VALUES ('$username', '$hash_pass', '$email', '0')"))
             {
                 $_SESSION['add_user_passed'] = "Successfully added user";
             }

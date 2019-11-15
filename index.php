@@ -43,8 +43,18 @@
                 <input type="password" name="re_password" placeholder="Powtórz hasło" id="re_password">
                 <input type="email" name="e-mail" placeholder="E-mail">
 
-
                 <input type="submit" value="Zajerestruj się">
+
+                <?php
+                    if (isset($_SESSION['add_user_error']))
+                    {
+                        echo '<span style="color: red; font-weight: bold;">' . $_SESSION['add_user_error'] . '</span>';
+                    }
+                    elseif (isset($_SESSION['add_user_passed']))
+                    {
+                        echo '<span style="color: green; font-weight: bold;">' . $_SESSION['add_user_passed'] . '</span>';
+                    }
+                ?>
             </form>
         </div>
     </div>
