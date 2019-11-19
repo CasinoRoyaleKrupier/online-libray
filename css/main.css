@@ -1,0 +1,8 @@
+main
+{
+    width: calc(100% - 200px);
+    height: calc(100vh - 80px);
+    top: 80px;
+    left: 200px;
+    position: absolute;
+}
