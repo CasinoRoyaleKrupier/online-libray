@@ -19,7 +19,7 @@
 
             $rows_count = $result->num_rows;
             if ($rows_count < 1) {
-                echo "Nie masz wyporzyczonej żadnej książki";
+                echo '<span id="table_title">Nie masz wyporzyczonej żadnej książki</span>';
             } else {
                 echo <<< END
                     <span id="table_title">Wypożyczone książki</span>

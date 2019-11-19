@@ -20,20 +20,20 @@
                 echo '<span id="table_title">W bazie danych nie ma książek</span>';
             } else {
                 echo <<< END
-                    <span id="table_title">Wypożyczone książki</span>
+                    <span id="table_title">Dostępne książki</span>
                     <table class="tg" align="center">
                         <tr>
+                            <th class="tg-c3ow"></th>
                             <th class="tg-c3ow">Tytuł</th>
                             <th class="tg-c3ow">Autor</th>
-                            <th class="tg-c3ow">Pages</th>
                         </tr>
                 END;
 
-                echo '<tr><td>' . $row['series'] . ': ' . $row['title'] . '</td><td>' . $row['author'] . '</td><td>' . $row['number_of_pages'] . '</td></tr>';
+                echo '<tr><td><input type="checkbox"></td><td>' . $row['series'] . ': ' . $row['title'] . '</td><td>' . $row['author'] . '</td></tr>';
 
                 while($row = mysqli_fetch_array($result))
                 {
-                    echo '<tr><td>' . $row['series'] . ': ' . $row['title'] . '</td><td>' . $row['author'] . '</td><td>' . $row['number_of_pages'] . '</td></tr>';
+                    echo '<tr><td><input type="checkbox"></td><td>' . $row['series'] . ': ' . $row['title'] . '</td<td><td>' . $row['author'] . '</td></tr>';
                 }
 
                 echo "</table>";

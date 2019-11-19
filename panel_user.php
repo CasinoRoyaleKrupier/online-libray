@@ -46,7 +46,7 @@
             <a href="panel_list_of_books.php">Lista książek</a>
         </div>
         <div class="nav_button">
-            <a href="#">Wypożycz</a>
+            <a href="panel_get_book.php">Wypożycz</a>
         </div>
     </nav>
 

@@ -51,7 +51,7 @@
     </nav>
 
     <main>
-        <?php require_once "books_all.php" ?>
+        <?php require_once "books_get.php" ?>
     </main>
 
     <script src="js/header_listeners.js"></script>
