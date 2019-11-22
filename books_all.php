@@ -29,12 +29,14 @@
                     <span id="table_title">Lista wszystkich książek</span>
                     <table class="tg" align="center">
                         <tr>
+                            <th class="tg-c3ow">Id</th>
                             <th class="tg-c3ow">Tytuł</th>
                             <th class="tg-c3ow">Autor</th>
                             <th class="tg-c3ow">Strony</th>
                             <th class="tg-c3ow">Dostępność</th>
                         </tr>
                         <tr>
+                            <td>$row[id]</td>
                             <td>$row[series]: $row[title]</td>
                             <td>$row[author]</td>
                             <td>$row[number_of_pages]</td>
@@ -52,6 +54,7 @@
 
                     echo <<< END
                         <tr>
+                            <td>$row[id]</td>
                             <td>$row[series]: $row[title]</td>
                             <td>$row[author]</td>
                             <td>$row[number_of_pages]</td>

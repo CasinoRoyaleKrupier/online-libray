@@ -6,3 +6,20 @@ main
     left: 200px;
     position: absolute;
 }
+
+main form
+{
+    text-align: center;
+}
+
+form legend
+{
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+input[type=submit]
+{
+    margin-top: 10px;
+}

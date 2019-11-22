@@ -25,16 +25,29 @@
                     <span id="table_title">Wypożyczone książki</span>
                     <table class="tg" align="center">
                         <tr>
+                            <th class="tg-c3ow">Id</th>
                             <th class="tg-c3ow">Tytuł</th>
                             <th class="tg-c3ow">Autor</th>
                         </tr>
                 END;
 
-                echo "<tr><td>" . $row['series'] . ": " . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>";
+                echo <<< END
+                    <tr>
+                        <td>$row[id]</td>
+                        <td>$row[series]: $row[title]</td>
+                        <td>$row[author]</td>
+                    </tr>
+                END;
 
                 while($row = mysqli_fetch_array($result))
                 {
-                    echo "<tr><td>" . $row['series'] . ": " . $row['title'] . "</td><td>" . $row['author'] . "</td></tr>";
+                    echo <<< END
+                        <tr>
+                            <td>$row[id]</td>
+                            <td>$row[series]: $row[title]</td>
+                            <td>$row[author]</td>
+                        </tr>
+                    END;
                 }
 
                 echo "</table>";

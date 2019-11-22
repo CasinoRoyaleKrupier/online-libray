@@ -51,7 +51,22 @@
     </nav>
 
     <main>
-        <?php require_once "books_get.php" ?>
+        <form action="book_rent.php" method="post">
+            <legend>Wypożycz książke</legend>
+
+            <label for="book_id">Podaj id książki</label>
+            <input type="text" name="book_id" id="book_id">
+
+            <br>
+
+            <input type="submit">
+
+            <?php
+                if (isset($_SESSION['book_rent_message'])) {
+                    echo $_SESSION['book_rent_message'];
+                }
+            ?>
+        </form>
     </main>
 
     <script src="js/header_listeners.js"></script>
