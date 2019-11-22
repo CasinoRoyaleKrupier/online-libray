@@ -40,7 +40,7 @@
 
     <nav>
         <div class="nav_button">
-            <a href="panel_user.php">Panel użytkownika</a>
+            <a href="panel_user.php">Moje książki</a>
         </div>
         <div class="nav_button">
             <a href="panel_list_of_books.php">Lista książek</a>

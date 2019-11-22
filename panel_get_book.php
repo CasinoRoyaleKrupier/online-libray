@@ -40,7 +40,7 @@
 
     <nav>
         <div class="nav_button">
-            <a href="panel_user.php">Panel użytkownika</a>
+            <a href="panel_user.php">Moje książki</a>
         </div>
         <div class="nav_button">
             <a href="panel_list_of_books.php">Lista książek</a>
@@ -64,6 +64,23 @@
             <?php
                 if (isset($_SESSION['book_rent_message'])) {
                     echo $_SESSION['book_rent_message'];
+                }
+            ?>
+        </form>
+
+        <form action="book_back_rent.php" method="post">
+            <legend>Oddaj książke</legend>
+
+            <label for="book_id">Podaj id książki</label>
+            <input type="text" name="book_id" id="book_id">
+
+            <br>
+
+            <input type="submit">
+
+            <?php
+                if (isset($_SESSION['book_back_rent_message'])) {
+                    echo $_SESSION['book_back_rent_message'];
                 }
             ?>
         </form>
