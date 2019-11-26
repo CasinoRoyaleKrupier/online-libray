@@ -10,7 +10,7 @@
 
     if (empty($title) || empty($author)) {
         $_SESSION['book_add_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Podaj minimum tytuł oraz autora książki</span>';
-        header('Location: admin_panel.php');
+        header('Location: admin_panel_add_book.php');
         exit();
     }
 
@@ -31,5 +31,5 @@
         // $result->close();
         // $connection->close();
 
-        header('Location: admin_panel.php');
+        header('Location: admin_panel_add_book.php');
 ?>
