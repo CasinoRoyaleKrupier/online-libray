@@ -1,14 +1,14 @@
 <?php
     session_start();
 
-    require_once "connect.php";
+    require_once "../connect.php";
 
     $id_book = $_POST['book_id'];
     $rent_user = $_SESSION['user'];
 
     if (empty($id_book)) {
-        $_SESSION['book_rent_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Podaj id książki</span>';
-        header('Location: panel_get_book.php');
+        $_SESSION['book_remove_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Podaj id książki</span>';
+        header('Location: admin_panel_remove_book.php');
         exit();
     }
 
@@ -26,22 +26,22 @@
 
             $rows_count = $result->num_rows;
             if ($rows_count == 0) {
-                $_SESSION['book_rent_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Nie znaleziono książki</span>';
+                $_SESSION['book_remove_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Nie znaleziono książki</span>';
             } else {
                 if ($row['is_available'] == 1) {
-                    if ($update_row = $connection->query("UPDATE books SET is_available = false, borrower = 'user' WHERE id = $id_book")) {
-                        $_SESSION['book_rent_message'] = '<br><span style="color: green; font-weight: bold; margin-top: 10px">Książke dodano pomyślnie</span>';
+                    if ($update_row = $connection->query("DELETE FROM books WHERE id = $id_book")) {
+                        $_SESSION['book_remove_message'] = '<br><span style="color: green; font-weight: bold; margin-top: 10px">Książke usunięto pomyślnie</span>';
                     }
                 } else {
-                    $_SESSION['book_rent_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Nie znaleziono książki lub została już wypożyczona</span>';
+                    $_SESSION['book_remove_message'] = '<br><span style="color: red; font-weight: bold; margin-top: 10px">Nie znaleziono książki</span>';
                 }
             }
             // $update_row->close();
         }
 
-        $result->close();
-        $connection->close();
+        // $result->close();
+        // $connection->close();
 
-        header('Location: panel_get_book.php');
+        header('Location: admin_panel_remove_book.php');
     }
 ?>

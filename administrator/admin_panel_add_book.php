@@ -43,6 +43,8 @@
     <nav>
         <div class="nav_button">
             <a href="admin_panel_add_book.php">Dodaj książkę</a>
+        </div>
+        <div class="nav_button">
             <a href="admin_panel_remove_book.php">Usuń książkę</a>
         </div>
     </nav>

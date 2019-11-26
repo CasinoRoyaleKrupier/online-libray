@@ -43,35 +43,26 @@
     <nav>
         <div class="nav_button">
             <a href="admin_panel_add_book.php">Dodaj książkę</a>
+        </div>
+        <div class="nav_button">
             <a href="admin_panel_remove_book.php">Usuń książkę</a>
         </div>
     </nav>
 
     <main>
-        <form action="book_add.php" method="post">
-            <legend>Dodaj książke</legend>
+        <form action="book_remove.php" method="post">
+            <legend>Oddaj książke</legend>
 
-            <label for="title_book">Tytuł książki</label>
-            <input type="text" name="title_book" id="title_book">
-            <br>
+            <label for="book_id">Podaj id książki</label>
+            <input type="text" name="book_id" id="book_id">
 
-            <label for="series_book">Seria książki</label>
-            <input type="text" name="series_book" id="series_book">
-            <br>
-
-            <label for="author_book">Autor książki</label>
-            <input type="text" name="author_book" id="author_book">
-            <br>
-
-            <label for="count_pages">Ilość stron</label>
-            <input type="text" name="count_pages" id="count_pages">
             <br>
 
             <input type="submit">
 
             <?php
-                if (isset($_SESSION['book_add_message'])) {
-                    echo $_SESSION['book_add_message'];
+                if (isset($_SESSION['book_remove_message'])) {
+                    echo $_SESSION['book_remove_message'];
                 }
             ?>
         </form>
