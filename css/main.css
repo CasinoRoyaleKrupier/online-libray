@@ -21,5 +21,9 @@ form legend
 
 input[type=submit]
 {
-    margin: 10px 0;
+    margin: 10px;
+}
+
+input[type=text] {
+    margin: 5px;
 }

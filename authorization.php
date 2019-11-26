@@ -34,9 +34,16 @@
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['user'] = $row['username'];
                     $_SESSION['email'] = $row['mail'];
+                    $_SESSION['is_admin'] = $row['is_administrator'];
 
                     unset($_SESSION['error']);
-                    header('Location: panel_user.php');
+
+                    if ($_SESSION['is_admin'] == true) {
+                        header('Location: administrator/admin_panel_add_book.php');
+                    } else {
+                        header('Location: panel_user.php');
+                    }
+
                     $result->close();
                 }
                 else
